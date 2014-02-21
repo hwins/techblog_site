@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% load endless %}
+
+{% block base_content %}
+	
+	<div id="page">
+	
+		{% include "header.html" %}
+		
+		<div class="main-content ">
+		
+			<div class="left-content-inner">
+				<div class="margin-space">
+					
+				</div>
+				<div class="post-content">
+					{% block page_content %}
+						{% paginate object_list %}				
+						{% for post in object_list %}
+					
+						<h2><a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">{{post.title}}</a></h2>
+					
+						<div class="post-meta">
+							on {{ post.publish_date|date:"N d, Y" }}
+						</div>
+
+						<div class="post-body">
+  							{{ post.body_primary|safe|linebreaks }}
+						</div>
+					
+						<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
+
+						{% endfor %}
+						<p>
+						{% show_pages %}
+						</p>
+					{% endblock %}
+					
+				</div> 
+			</div>
+		
+			<div class="right-sidebar">
+				<div class="right-sidebar-inner">
+					{% include "slogan_block.html" %}
+					{% include "navagation.html" %}
+					{% include "twitter_block.html" %}
+					{% include "grcode_block.html" %}
+				</div>
+			</div>
+			
+		</div>
+		
+		{% include "footer.html" %}
+		
+	</div>	
+	
+{% endblock %}

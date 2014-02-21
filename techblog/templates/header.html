@@ -1,0 +1,13 @@
+{% load static %}
+<div class="section-header" >
+	 <div id="logo-img">
+		
+		{% comment %}
+		 	alternate the logo header image at with various random numbered files
+		{% endcomment %}		
+		{% load random_file_selector %}
+				 
+	 	 <a href="/" rel="home" title="" class="active">
+	 	 	<img src="{% static 'img/logo' %}{% random_file_number %}.png" alt="" id="logo" /></a> 
+      </div>
+</div>

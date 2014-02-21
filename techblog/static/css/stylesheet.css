@@ -1,0 +1,152 @@
+/* stylsheet.css */
+body {
+	color: #3E3E3E;
+    font-size: 18px;
+    font-family: Tahoma,Calibri,Verdana,Geneva,sans-serif;
+    margin: 0 35px;
+    background: #ffffff url(../img/background.png) repeat scroll 0% 0%;
+    min-width: 960px;
+}
+
+.section-header {
+	background-color: #000000;
+}
+
+#logo-img {
+	text-align: center;
+	float: none;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 0px;
+	padding-bottom: 0px;	
+}
+
+#page {	
+    background-color: #F0F0F0;
+	color: #3E3E3E;	
+}
+
+.main-content {
+	width: 100%;
+}
+
+.left-content-inner {
+	margin-right: -300px;
+	float: left;
+	width: 100%;
+}
+
+.margin-space {
+	margin-top: 26px;
+	clear: both;
+}
+
+.post-content {
+	margin-right: 300px;
+	padding: 26px;
+}
+
+.post-body {
+	line-height: 32px;
+}
+
+code {
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 18px;	
+	letter-spacing: 2px;
+	line-height: 28px;
+	color: #0000C0;
+	background: #eeeeee;
+	width: 100%;
+	display: inline-block;
+}
+
+img {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color: #ffffff;
+}
+
+h1 {
+	font-size: 24px;
+	font-weight: normal;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-top: 16px;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-size: 24px;
+	font-weight: normal;
+	font-family: Helvetica, Arial, sans-serif;
+	margin-top: 16px;
+	letter-spacing: 2px;
+}
+
+a:link, a:visited {
+  color: #636300;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #202124;
+  text-decoration: none;
+}
+
+.right-sidebar {
+	float: left;
+    width: 300px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+}
+
+.right-sidebar-inner {
+	background-color: #404040;
+    border: 3px solid #917E7E;
+    padding: 3px;
+    color: #F0F0F0;
+}
+
+.block {
+	padding-top: 16px;
+}
+
+.slogan-title {
+	padding-top: 0px;
+	letter-spacing: normal;
+	text-align: center;
+	font-size: 16px;
+	font-weight: normal;
+	color: #F3F3F3;
+	font-family: Helvetica,Arial,sans-serif;
+	line-height: 16pt;	
+}
+
+.slogan-text {
+	font-size: 14px;
+	font-family: Times New Roman, serif;
+	letter-spacing: normal;
+	text-align: center;
+	margin: 16px;
+}
+
+#grcode {
+	text-align: center;	
+}
+
+.footer {
+	clear: both;
+	margin-top: -80px;
+	margin-bottom: 20px;
+}
+
+.footer-inner {
+	height: 80px;
+	background-color: black;
+    color: white;
+    padding: 16px;
+    text-align: center;
+}
