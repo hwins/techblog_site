@@ -16,6 +16,7 @@
 				</div>
 				<div class="post-content">
 					{% block page_content %}
+						<div class="listviewtitle">{{listview_title}}</div>
 						{% paginate object_list %}				
 						{% for post in object_list %}
 					
@@ -30,7 +31,13 @@
 						</div>
 					
 						<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
-
+							
+							<p>
+							{% for topic in post.topic_tags %}
+								{{topic}}
+							{% endfor %}
+							</p>
+							
 						{% endfor %}
 						<p>
 						{% show_pages %}

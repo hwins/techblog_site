@@ -15,5 +15,5 @@ urlpatterns = patterns('',
                            'django.views.static.serve',
                            {'document_root': settings.MEDIA_ROOT}
                            ),
-                       url(r'^', include('techblog.content.urls')),
+                       url(r'^', include('techblog.apps.content.urls')),
 )

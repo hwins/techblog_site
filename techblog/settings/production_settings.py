@@ -35,7 +35,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'endless_pagination',
     'tinymce',
-    'techblog.content',
+    'techblog.apps.content',
 )
 
 MIDDLEWARE_CLASSES = (
