@@ -89,6 +89,7 @@
 	margin-top: 2px;
 	padding: .5em .5em .5em .7em;
 	min-height: 0; /* support: IE7 */
+	border-radius: 25px;
 }
 .ui-accordion .ui-accordion-icons {
 	padding-left: 2.2em;
@@ -805,21 +806,27 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget-content {
-	border: 1px solid #aaaaaa/*{borderColorContent}*/;
-	background: #ffffff/*{bgColorContent}*/ url(../img/jquery/ui-bg_flat_75_ffffff_40x100.png)/*{bgImgUrlContent}*/ 50%/*{bgContentXPos}*/ 50%/*{bgContentYPos}*/ repeat-x/*{bgContentRepeat}*/;
-	color: #222222/*{fcContent}*/;
+/* 	border: 1px solid #aaaaaa{borderColorContent}; */
+/* 	background: #ffffff{bgColorContent} url(../img/jquery/ui-bg_flat_75_ffffff_40x100.png){bgImgUrlContent} 50%{bgContentXPos} 50%{bgContentYPos} repeat-x{bgContentRepeat}; */
+	background-color: #404040;
+/* 	color: #222222{fcContent}; */
+	color: #FFFFFF;
 }
 .ui-widget-content a {
-	color: #222222/*{fcContent}*/;
+/* 	color: #222222{fcContent}; */
+	color: #FFFFFF;
+}
+.ui-widget-content a:hover  {
+	color: #636300;/*{fcContent}*/;
 }
 .ui-widget-header {
 	border: 1px solid #aaaaaa/*{borderColorHeader}*/;
 	background: #cccccc/*{bgColorHeader}*/ url(../img/jquery/ui-bg_highlight-soft_75_cccccc_1x100.png)/*{bgImgUrlHeader}*/ 50%/*{bgHeaderXPos}*/ 50%/*{bgHeaderYPos}*/ repeat-x/*{bgHeaderRepeat}*/;
-	color: #222222/*{fcHeader}*/;
+	color: #222222{fcHeader};	
 	font-weight: bold;
 }
 .ui-widget-header a {
-	color: #222222/*{fcHeader}*/;
+	color: #222222{fcHeader};
 }
 
 /* Interaction states

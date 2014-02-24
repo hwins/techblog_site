@@ -8,23 +8,37 @@ from techblog.apps.content.models import Post_Topic
 from techblog.apps.content.models import Topic
 
 
-class PostListView(ListView):
-    template_name = 'base_template.html'
+def add_topic_list(queryset):
+    """Add a list of topics for each post in the queryset."""
+    for item_number, post in enumerate(queryset):
+        topic_tags = []
+        post_topic_queryset = Post_Topic.objects.\
+            filter(post_id=post.pk)
+        for tag in post_topic_queryset:
+            try:
+                get_topic_info = Topic.objects.get(id=tag.topic_id_id)
+            except Topic.DoesNotExist:
+                get_topic_info = None
+            topic_tags.append(get_topic_info)
+        queryset[item_number].topic_tags = topic_tags
+    return queryset
 
-    def get_context_data(self, **kwargs):
-        context = super(PostListView, self).get_context_data(**kwargs)
-        context['listview_title'] = "Recent Posts"
-        return context
+
+class PostListView(ListView):
+    """View for posts for both default home page and topic pages"""
+
+    template_name = 'base_template.html'
 
     def get_queryset(self):
         queryset = Post.objects.\
             filter(published=True).\
             order_by('-publish_date')
-        # add a list of topics for each post in the queryset
-        for item_number, post in enumerate(queryset):
-            topic_tags = Post_Topic.objects.filter(post_id=post.pk)
-            queryset[item_number].topic_tags = topic_tags
-        return queryset
+        return add_topic_list(queryset)
+
+    def get_context_data(self, **kwargs):
+        context = super(PostListView, self).get_context_data(**kwargs)
+        context['listview_title'] = "Recent Posts"
+        return context
 
 
 class PostDetailView(DetailView):
@@ -70,7 +84,7 @@ class TopicPostListView(ListView):
             filter(topic_id=topic_detail.pk)
         queryset = Post.objects.\
             filter(post_topic__in=posts_on_topic_list)
-        return queryset
+        return add_topic_list(queryset)
 
     def get_context_data(self, **kwargs):
         context = super(TopicPostListView, self).get_context_data(**kwargs)

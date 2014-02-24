@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load endless %}
+{% load format_topic_tags %}
 
 {% block base_content %}
 	
@@ -16,7 +17,7 @@
 				</div>
 				<div class="post-content">
 					{% block page_content %}
-						<div class="listviewtitle">{{listview_title}}</div>
+						<h1><div class="listview-title">{{listview_title}}</div></h1>
 						{% paginate object_list %}				
 						{% for post in object_list %}
 					
@@ -32,15 +33,13 @@
 					
 						<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
 							
-							<p>
-							{% for topic in post.topic_tags %}
-								{{topic}}
-							{% endfor %}
-							</p>
+						<p>
+						{{post.topic_tags|topic_tags_out|safe}}
+						</p>
 							
 						{% endfor %}
 						<p>
-						{% show_pages %}
+						<div class="page_line">{% show_pages %}</div>
 						</p>
 					{% endblock %}
 					

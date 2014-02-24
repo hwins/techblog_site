@@ -75,13 +75,14 @@ h1 {
 	font-family: Helvetica, Arial, sans-serif;
 	margin-top: 16px;
 	letter-spacing: 2px;
+	text-align: center;
 }
 
 h2 {
 	font-size: 24px;
 	font-weight: normal;
 	font-family: Helvetica, Arial, sans-serif;
-	margin-top: 16px;
+	margin-top: 60px;
 	letter-spacing: 2px;
 }
 
@@ -95,6 +96,38 @@ a:hover {
   text-decoration: none;
 }
 
+.listview-title {
+	color: #FFFFFF;
+	background-color: #404040; 
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888; 
+}
+
+.topic-tag {
+	color: #FFFFFF;
+	background-color: #404040; 
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888; 
+}
+
+.topic-tag a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.topic-tag a:hover {
+	color: #636300;
+	text-decoration: none;
+}
+
 .right-sidebar {
 	float: left;
     width: 300px;
@@ -105,7 +138,7 @@ a:hover {
 
 .right-sidebar-inner {
 	background-color: #404040;
-    border: 3px solid #917E7E;
+    border: 3px solid #000000;
     padding: 3px;
     color: #F0F0F0;
 }
@@ -135,6 +168,31 @@ a:hover {
 
 #grcode {
 	text-align: center;	
+}
+
+.page_line {
+	margin-top: 60px;
+	text-align: center;
+}
+
+a.endless_page_link {
+	color: #FFFFFF;
+	background-color: #404040; 
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+a.endless_page_link:hover {
+	color: #636300;
+	text-decoration: none;
+}
+
+.endless_page_current {
+	color: #3E3E3E;
 }
 
 .footer {
