@@ -10,11 +10,11 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 
 path = os.path.abspath(os.path.dirname(__file__))
-PROJECT_PATH = os.path.normpath(os.path.join(path,  ".."))
+PROJECT_PATH = os.path.normpath(os.path.join(path,  "../.."))
 
 # all sensitive data stored in control folder
 
-with open(PROJECT_PATH + '/settings/control/secret_key.private') as f:
+with open(PROJECT_PATH + '/control/secret_key.private') as f:
     SECRET_KEY = f.read().strip()
 
 DEBUG = False
@@ -33,6 +33,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.flatpages',
     'endless_pagination',
     'tinymce',
     'techblog.apps.content',
@@ -51,7 +52,7 @@ ROOT_URLCONF = 'techblog.urls'
 
 WSGI_APPLICATION = 'techblog.wsgi.application'
 
-with open(PROJECT_PATH + '/settings/control/db1_password.private') as f:
+with open(PROJECT_PATH + '/control/db1_password.private') as f:
     DB1_PASSWORD = f.read().strip()
 
 DATABASES = {
@@ -92,7 +93,7 @@ ENDLESS_PAGINATION_PER_PAGE = 5
 MEDIA_ROOT = '/var/www/blog.howardwinston.com/media/'
 MEDIA_URL = '/media/'
 
-STATIC_ROOT = 'var/www/blog.howardwinston.com/static/'
+STATIC_ROOT = '/var/www/blog.howardwinston.com/static/'
 STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = (
@@ -125,3 +126,9 @@ TINYMCE_DEFAULT_CONFIG = {
     'paste_auto_cleanup_on_paste': 'true',
     'content_css': '/static/css/tinymce_edit.css',
     }
+
+SITE_ID = 1
+
+ENDLESS_PAGINATION_PER_PAGE = 5
+
+HOLD_TWITTERJS = False

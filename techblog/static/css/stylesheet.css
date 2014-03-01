@@ -107,6 +107,23 @@ a:hover {
 	box-shadow: 10px 10px 5px #888888; 
 }
 
+.flatpage-title {
+	color: #FFFFFF;
+	background-color: #404040; 
+	display: inline;
+	margin: 10px;
+	padding: 10px;
+	border: 10px;
+	border-radius: 10px;
+	box-shadow: 10px 10px 5px #888888; 
+}
+
+.flatpage-content {
+	margin-top: 60px;
+	font-family: Times,serif;
+	font-size: 20px;
+}
+
 .topic-tag {
 	color: #FFFFFF;
 	background-color: #404040; 
@@ -138,8 +155,8 @@ a:hover {
 
 .right-sidebar-inner {
 	background-color: #404040;
-    border: 3px solid #000000;
-    padding: 3px;
+    border-right: 10px solid #000000;
+    padding: 16px;
     color: #F0F0F0;
 }
 

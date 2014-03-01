@@ -16,3 +16,7 @@ urlpatterns = patterns('techblog.apps.content.views',
         TopicPostListView.as_view()
         ),
 )
+
+urlpatterns += patterns('django.contrib.flatpages.views',
+    (r'^(?P<url>.*/)$', 'flatpage'),
+)

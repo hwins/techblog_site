@@ -88,5 +88,5 @@ class TopicPostListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(TopicPostListView, self).get_context_data(**kwargs)
-        context['listview_title'] = self.topic_name
+        context['listview_title'] = self.topic_name + ' Topics'
         return context

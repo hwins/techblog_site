@@ -7,11 +7,26 @@ from techblog.apps.content.models import Topic
 
 register = template.Library()
 
-ABOUT_LINKS = '<h3>About</h3><ul>' + \
-    '<li>link1</li>' + \
-    '<li>link2</li>' + \
-    '<li>link3</li>' + \
-    '<li>link4</li></ul>'
+
+class DefaultOpenLinks():
+    """Return links that go in the first part (open as default) of the
+    accordion
+    """
+    # Hard coded for now, however this is a candidate for a better solution
+    def __init__(self):
+        self.about_links = '<h3>About</h3><ul>'
+        self.about_links += '<li><a href="/about">About</a></li>'
+        self.about_links += '<li><a href="http://art.howardwinston.com">' + \
+            'Creative Work</a></li>'
+        self.about_links += '<li><a href="https://github.com/hwins">' + \
+            'github</a></li>'
+        self.about_links += '<li><a href="http://twitter.com/#!/hwins">' + \
+            'Twitter</a></li>'
+        self.about_links += '<li><a href="/contact">Contact</a></li>'
+        self.about_links += '</ul>'
+
+    def __str__(self):
+        return self.about_links
 
 
 class AccordionLine():
@@ -125,7 +140,7 @@ def topics_accordion_out():
                     'post' + s + ')</li>' + accordion_out
                 published_count_for_group += als.topic_count
 
-    accordion_out = ABOUT_LINKS + accordion_out
+    accordion_out = str(DefaultOpenLinks()) + accordion_out
 
     accordion_out = '<div id="accordion">' + accordion_out
     return accordion_out
