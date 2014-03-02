@@ -3,9 +3,9 @@ from django.http import Http404
 from django.shortcuts import render
 from django.views.generic import DetailView
 from django.views.generic import ListView
-from techblog.apps.content.models import Post
-from techblog.apps.content.models import Post_Topic
-from techblog.apps.content.models import Topic
+from techblog_site.apps.content.models import Post
+from techblog_site.apps.content.models import Post_Topic
+from techblog_site.apps.content.models import Topic
 
 
 def add_topic_list(queryset):

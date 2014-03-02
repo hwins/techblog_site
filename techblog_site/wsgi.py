@@ -1,5 +1,5 @@
 """
-WSGI config for techblog project.
+WSGI config for techblog_site project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -10,7 +10,7 @@ https://docs.djangoproject.com/en/1.6/howto/deployment/wsgi/
 import os
 os.environ.setdefault(
                       "DJANGO_SETTINGS_MODULE",
-                      "techblog.settings"
+                      "techblog_site.settings"
                       )
 
 from django.core.wsgi import get_wsgi_application

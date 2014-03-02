@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.contrib.admin import options, widgets
 from tinymce.widgets import TinyMCE
 
-from techblog.apps.content import models
+from techblog_site.apps.content import models
 from django.forms.models import BaseInlineFormSet
 
 

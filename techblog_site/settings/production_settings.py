@@ -1,5 +1,5 @@
 """
-Django settings for techblog project.
+Django settings for techblog_site project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'endless_pagination',
     'tinymce',
-    'techblog.apps.content',
+    'techblog_site.apps.content',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'techblog.urls'
+ROOT_URLCONF = 'techblog_site.urls'
 
-WSGI_APPLICATION = 'techblog.wsgi.application'
+WSGI_APPLICATION = 'techblog_site.wsgi.application'
 
 with open(CONTROL_FILE_PATH + '/control/db1_password.private') as f:
     DB1_PASSWORD = f.read().strip()
@@ -60,7 +60,7 @@ with open(CONTROL_FILE_PATH + '/control/db1_password.private') as f:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'techblog',
+        'NAME': 'techblog_site',
         'USER': 'test',
         'PASSWORD': DB1_PASSWORD,
         'HOST': 'localhost',

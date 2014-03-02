@@ -1,11 +1,11 @@
 from django.conf.urls import patterns, url
 
-from techblog.apps.content.views import PostDetailView
-from techblog.apps.content.views import PostListView
-from techblog.apps.content.views import TopicPostListView
+from techblog_site.apps.content.views import PostDetailView
+from techblog_site.apps.content.views import PostListView
+from techblog_site.apps.content.views import TopicPostListView
 
 
-urlpatterns = patterns('techblog.apps.content.views',
+urlpatterns = patterns('techblog_site.apps.content.views',
     url(r'^$',
         PostListView.as_view()
         ),

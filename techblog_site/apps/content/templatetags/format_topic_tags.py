@@ -1,5 +1,5 @@
 from django import template
-from techblog.apps.content.models import Topic
+from techblog_site.apps.content.models import Topic
 
 
 register = template.Library()

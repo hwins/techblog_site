@@ -1,8 +1,8 @@
 from django import template
 
-from techblog.apps.content.models import Post
-from techblog.apps.content.models import Post_Topic
-from techblog.apps.content.models import Topic
+from techblog_site.apps.content.models import Post
+from techblog_site.apps.content.models import Post_Topic
+from techblog_site.apps.content.models import Topic
 
 
 register = template.Library()
