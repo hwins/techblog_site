@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block base_content %}
+	
+	<div id="page">
+	
+		{% include "header.html" %}
+		
+		<div class="main-content ">
+		
+			<div class="left-content-inner">
+				<div class="margin-space">
+				
+				</div>
+				<div class="post-content">
+					<h1><div class="flatpage-title">{{flatpage.title}}</div></h1>
+					<div class="flatpage-content">
+						{{ flatpage.content }}
+					</div>
+				</div> 
+			</div>
+		
+			<div class="right-sidebar">
+				<div class="right-sidebar-inner">
+					{% include "slogan_block.html" %}
+					{% include "navagation.html" %}
+					{% include "twitter_block.html" %}
+					{% include "grcode_block.html" %}
+				</div>
+			</div>
+			
+		</div>
+		
+		{% include "footer.html" %}
+		
+	</div>	
+	
+{% endblock %}

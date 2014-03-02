@@ -20,6 +20,12 @@
 				$( "#accordion" ).accordion();
 			});
 		</script>
+		<script>
+			$(document).ready(function() {
+				var ContentHeight = $(".left-content-inner").height();
+				$(".right-sidebar-inner").css("height", ContentHeight);
+			})
+		</script>
     	
 	</head>
 	<body>

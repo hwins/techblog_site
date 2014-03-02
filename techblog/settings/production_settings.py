@@ -10,11 +10,13 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 
 path = os.path.abspath(os.path.dirname(__file__))
-PROJECT_PATH = os.path.normpath(os.path.join(path,  "../.."))
+PROJECT_PATH = os.path.normpath(os.path.join(path,  ".."))
+#control files are one level above project path
+CONTROL_FILE_PATH = os.path.normpath(os.path.join(path,  "../.."))
 
 # all sensitive data stored in control folder
 
-with open(PROJECT_PATH + '/control/secret_key.private') as f:
+with open(CONTROL_FILE_PATH + '/control/secret_key.private') as f:
     SECRET_KEY = f.read().strip()
 
 DEBUG = False
@@ -52,7 +54,7 @@ ROOT_URLCONF = 'techblog.urls'
 
 WSGI_APPLICATION = 'techblog.wsgi.application'
 
-with open(PROJECT_PATH + '/control/db1_password.private') as f:
+with open(CONTROL_FILE_PATH + '/control/db1_password.private') as f:
     DB1_PASSWORD = f.read().strip()
 
 DATABASES = {
