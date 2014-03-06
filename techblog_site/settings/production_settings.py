@@ -92,7 +92,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 ENDLESS_PAGINATION_PER_PAGE = 5
 
-MEDIA_ROOT = '/var/www/blog.howardwinston.com/media/'
+MEDIA_ROOT = '/home/techblog/techblog_site/media/'
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = '/var/www/blog.howardwinston.com/static/'

@@ -9,7 +9,7 @@ PROJECT_PATH = os.path.normpath(os.path.join(path,  ".."))
 DEBUG = True
 TEMPLATE_DEBUG = True
 #
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media/')
+MEDIA_ROOT = os.path.join(PROJECT_PATH, '../media/')
 MEDIA_URL = '/media/'
 
 STATIC_ROOT = ''
