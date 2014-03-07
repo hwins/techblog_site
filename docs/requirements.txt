@@ -8,3 +8,4 @@ django-tinymce==1.5.2
 psycopg2==2.5.1
 pyenchant==1.6.5
 sorl-thumbnail==11.12
+uWSGI==2.0.2
