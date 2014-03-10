@@ -54,6 +54,8 @@ ROOT_URLCONF = 'techblog_site.urls'
 
 WSGI_APPLICATION = 'techblog_site.wsgi.application'
 
+with open(CONTROL_FILE_PATH + '/control/db1_user.private') as f:
+    DB1_USER = f.read().strip()
 with open(CONTROL_FILE_PATH + '/control/db1_password.private') as f:
     DB1_PASSWORD = f.read().strip()
 
@@ -61,7 +63,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'techblog_site',
-        'USER': 'test',
+        'USER': DB1_USER,
         'PASSWORD': DB1_PASSWORD,
         'HOST': 'localhost',
         'PORT': '5432',
@@ -89,8 +91,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
 )
-
-ENDLESS_PAGINATION_PER_PAGE = 5
 
 MEDIA_ROOT = '/home/techblog/techblog_site/media/'
 MEDIA_URL = '/media/'
