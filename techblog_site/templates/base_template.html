@@ -30,8 +30,10 @@
 						<div class="post-body">
   							{{ post.body_primary|safe }}
 						</div>
-					
-						<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
+	              
+	                    <div class="more-link">				
+							<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
+						</div>
 							
 						<p>
 						{{post.topic_tags|topic_tags_out|safe}}

@@ -51,6 +51,10 @@ body {
 	line-height: 32px;
 }
 
+.more-link {
+	margin-bottom: 32px;
+}
+
 code {
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 18px;	
