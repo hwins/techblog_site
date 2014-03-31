@@ -1,17 +1,11 @@
 # this module will override default settings with
 # development environment values
 
-import os
-# # #
-path = os.path.abspath(os.path.dirname(__file__))
-PROJECT_PATH = os.path.normpath(os.path.join(path,  ".."))
+
 # # #
 DEBUG = True
 TEMPLATE_DEBUG = True
-# # # #
-# # MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media/')
-# # MEDIA_URL = '/media/'
-# #  
+
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
@@ -21,6 +15,4 @@ STATICFILES_DIRS = (
 ENDLESS_PAGINATION_PER_PAGE = 2
 # 
 HOLD_TWITTERJS = True
-MEDIA_ROOT = '/home/developer/techblog_site/media/'
-MEDIA_URL = '/media/'
-# ALLOWED_HOSTS = ['127.0.0.1']
+
