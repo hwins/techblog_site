@@ -67,8 +67,8 @@ def topics_accordion_out():
     Note: accordion_out is built in reverse order for reasons that are
     explained in the comments in the code.
     """
-    accordion_out = '<script>$( "#accordion" ).accordion();</script>'
-    accordion_out = '</div>' + accordion_out
+#
+    accordion_out = '</div>'
     accordion_list = []
 
     # only include topics that are in published post so
