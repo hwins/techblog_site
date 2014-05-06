@@ -3,7 +3,9 @@ Techblog
 ========
 
 This is a django based blogging application that serves the 
-needs of one desiring a basic blog for technical purposes
+needs of one desiring a basic blog for technical purposes.
+
+http://blog.howardwinston.com
 
 Additional documentation to be placed in the "docs" directory.
 
