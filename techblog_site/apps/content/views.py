@@ -57,7 +57,20 @@ class PostDetailView(DetailView):
         render_dictionary['slug'] = post_object.slug
         render_dictionary['body_primary'] = post_object.body_primary
         render_dictionary['body_secondary'] = post_object.body_secondary
-
+        
+#         render_dictionary['post_topic_set'] = Topic.objects.get(id=tag.topic_id_id)
+#         render_dictionary['topic_tags'] = Topic.objects.get(id=post_object__id)
+        
+        topic_tags = []
+        post_topic_queryset = Post_Topic.objects.filter(post_id=post_object.pk)
+        for tag in post_topic_queryset:
+            try:
+                get_topic_info = Topic.objects.get(id=tag.topic_id_id)
+            except Topic.DoesNotExist:
+                get_topic_info = None
+            topic_tags.append(get_topic_info)
+        render_dictionary['topic_tags'] = topic_tags
+       
         return render(
                       request,
                       self.template_name,

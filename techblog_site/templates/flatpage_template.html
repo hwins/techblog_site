@@ -9,9 +9,7 @@
 		<div class="main-content ">
 		
 			<div class="left-content-inner">
-				<div class="margin-space">
-				
-				</div>
+				{% include "toggle_control.html" %}
 				<div class="post-content">
 					<h1><span class="flatpage-title">{{flatpage.title}}</span></h1>
 					<div class="flatpage-content">
@@ -20,12 +18,12 @@
 				</div> 
 			</div>
 		
-			<div class="right-sidebar">
+			<div class="right-sidebar">				
 				<div class="right-sidebar-inner">
 					{% include "slogan_block.html" %}
 					{% include "navagation.html" %}
-					{% include "twitter_block.html" %}
-					{% include "grcode_block.html" %}
+					{# {% include "twitter_block.html" %} #}
+					{# {% include "grcode_block.html" %} #}
 				</div>
 			</div>
 			

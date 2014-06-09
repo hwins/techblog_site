@@ -12,23 +12,17 @@
 		
   		<title>Blog - Howard Winston</title>
   		
-    	<link href="{% static 'css/stylesheet.css' %}" media="screen" rel="stylesheet" type="text/css" />
-    	<link href="{% static 'css/jquery-ui.css' %}" media="screen" rel="stylesheet" type="text/css" />
+  		<link href="{% static 'css/stylesheet.css' %}" 
+    		media="screen" rel="stylesheet" type="text/css" />
+    	<link href="{% static 'css/max-width-960.css' %}"
+    		media="screen and (max-width: 960px)" rel="stylesheet" type="text/css" />
+    	<link href="{% static 'css/max-width-480.css' %}"
+    		media="screen and (max-width: 480px)" rel="stylesheet" type="text/css" />
+    		    	  	
     	<script type="text/javascript" src="{% static 'js/jquery-1.11.0.min.js' %}"></script>
-    	
-    	<link href="{% static 'css/jquery-accordion.css' %}" media="screen" rel="stylesheet" type="text/css" />
     	<script type="text/javascript" src="{% static 'js/jquery-ui.js' %}"></script>
-		<script type="text/javascript">
-			$(function() {
-				$( "#accordion" ).accordion();
-			});
-		</script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				var ContentHeight = $(".left-content-inner").height();
-				$(".right-sidebar-inner").css("height", ContentHeight);
-			})
-		</script>    	
+    	<script type="text/javascript" src="{% static 'js/site.js' %}"></script>
+    	    	
 	</head>
 	
 	<body>

@@ -12,9 +12,7 @@
 		<div class="main-content ">
 		
 			<div class="left-content-inner">
-				<div class="margin-space">
-					
-				</div>
+				{% include "toggle_control.html" %}
 				<div class="post-content">
 					{% block page_content %}
 						<h1><span class="listview-title">{{listview_title}}</span></h1>
@@ -30,12 +28,14 @@
 						<div class="post-body">
   							{{ post.body_primary|safe }}
 						</div>
-	              
-	                    <div class="more-link">				
+						
+						<div class="more-link">				
 							<a href="/{{post.publish_date|date:'Y'}}/{{post.publish_date|date:'m'}}/{{post.publish_date|date:'d'}}/{{post.slug}}">more...</a>
 						</div>
 							
-						{{post.topic_tags|topic_tags_out|safe}}
+						<div class="topic-tags">
+							{{post.topic_tags|topic_tags_out|safe}}
+						</div>
 							
 						{% endfor %}
 						
@@ -50,15 +50,15 @@
 				<div class="right-sidebar-inner">
 					{% include "slogan_block.html" %}
 					{% include "navagation.html" %}
-					{% include "twitter_block.html" %}
-					{% include "grcode_block.html" %}
+					{# {% include "twitter_block.html" %} #}
+					{# {% include "grcode_block.html" %} #}
 				</div>
-			</div>
+			</div>	
 			
 		</div>
-		
+				
 		{% include "footer.html" %}
-		
+				
 	</div>	
 	
 {% endblock %}

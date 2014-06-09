@@ -6,7 +6,10 @@ register = template.Library()
 
 TWITTERJS = "<p><a class=\"twitter-timeline\" " + \
     "data-widget-id=\"333220753849851906\" " + \
-    "href=\"https://twitter.com/hwins\">Tweets by @hwins</a></p> " + \
+    "href=\"https://twitter.com/hwins\" " + \
+    "data-theme=\"dark\" " + \
+    "width=\"250\" " + \
+    ">Tweets by @hwins</a></p> " + \
     "\n<script type=\"text/javascript\">\n" + \
     "<!--//--><![CDATA[// ><!--\n" + \
     "!function(d,s,id)" + \
