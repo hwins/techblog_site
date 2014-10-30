@@ -25,7 +25,8 @@ var windowResize = function() {
 		$(".right-sidebar-inner").css("border-left","1px solid black");
 		$(".right-sidebar-inner").css("border-bottom","1px solid black");
 		$(".right-sidebar-inner").hide("slide", {direction: "right"}, speedAmt);
-		$(".post-content").css("margin-right", "0px");		
+		$(".post-content").css("margin-right", "0px");
+		hiddenSidebar = true;
 	}
 	else {
 		$("#toggle").css("visibility", "hidden");

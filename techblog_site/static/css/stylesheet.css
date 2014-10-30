@@ -221,7 +221,12 @@ a:hover {
 	font-weight: normal;
 	font-family: Helvetica, Arial, sans-serif;
 	margin-top: 16px;
-	letter-spacing: 2px;
+	letter-spacing: 2px;	
+}
+
+.ui-accordion h3:hover {
+	color: #636300;
+	text-decoration: none;
 }
 
 .ui-accordion .ui-accordion-content {
