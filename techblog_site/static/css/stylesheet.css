@@ -41,6 +41,10 @@ body {
 	width: 100%;
 }
 
+.post-teaser {
+	display: inline-block;
+}
+
 .post-content {
 	padding: 26px;
 }
@@ -237,7 +241,7 @@ a:hover {
 
 .twitter-timeline {
 	color: #FFFFFF;
-	background-color: #404040; 
+	background-color: #404040;
 	display: inline;
 	margin: 10px;
 	border-radius: 10px;
