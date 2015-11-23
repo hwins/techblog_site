@@ -1,11 +1,6 @@
 """
 Django settings for techblog_site project.
 
-For more information on this file, see
-https://docs.djangoproject.com/en/1.6/topics/settings/
-
-For the full list of settings and their values, see
-https://docs.djangoproject.com/en/1.6/ref/settings/
 """
 import os
 
@@ -23,7 +18,13 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['.howardwinston.com', 'howardwinston.com']
+ALLOWED_HOSTS = ['blog.howardwinston.com', ]
+
+# access to /admin path is restricted via webserver
+# this host name is for administrator
+with open(CONTROL_FILE_PATH + '/control/admin_url.private') as f:
+    ALLOWED_HOSTS.append(f.read().strip())
+
 
 INSTALLED_APPS = (
     'grappelli',
@@ -65,7 +66,7 @@ DATABASES = {
         'NAME': 'techblog_site',
         'USER': DB1_USER,
         'PASSWORD': DB1_PASSWORD,
-        'HOST': 'localhost',
+        'HOST': 'postgresDB',
         'PORT': '5432',
     }
 }

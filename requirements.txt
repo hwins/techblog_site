@@ -1,0 +1,10 @@
+Django
+django-endless-pagination
+django-filebrowser
+django-grappelli
+django-tinymce
+Django-tinymce-filebrowser
+Pillow
+psycopg2
+pyenchant
+sorl-thumbnail
