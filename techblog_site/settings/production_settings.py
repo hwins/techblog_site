@@ -66,7 +66,7 @@ DATABASES = {
         'NAME': 'techblog_site',
         'USER': DB1_USER,
         'PASSWORD': DB1_PASSWORD,
-        'HOST': 'postgresDB',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
